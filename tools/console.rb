@@ -30,5 +30,6 @@ rev8 = Review.new(abe, balcon, 4, "Something was wrong today")
 rev9 = Review.new(aya, balcon, 3, "I went again and it was still too spicy")
 rev10 = Review.new(abe, mimis, 5, "Love et")
 
+puts "Bonus methods are: customer.most_reviews, restaurant#frequent_flier, and restaurant.best_reviewed_restaurant"
 binding.pry
 0 #leave this here to ensure binding.pry isn't the last line
