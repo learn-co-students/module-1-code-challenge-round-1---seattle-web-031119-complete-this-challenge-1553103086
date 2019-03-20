@@ -45,4 +45,10 @@ class Customer
     reviews.map( &:restaurant ).uniq
   end
 
+  def self.most_reviews
+    # Returns customer with most reviews
+    cust_w_most_reviews = self.all.max_by { |cust| cust.reviews.count}
+    "The person with the most reviews is #{cust_w_most_reviews.full_name}, with #{cust_w_most_reviews.reviews.count} reviews."
+  end
+
 end

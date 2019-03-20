@@ -45,4 +45,18 @@ class Restaurant
     end
     "Your biggest customer is #{customer_w_most_reviews.full_name}, with #{most_reviews} reviews."
   end
+
+  def self.best_reviewed_restaurant
+    # Returns restaurant with highest average review
+    best_avg_review = 0
+    best_restaurant = nil
+    self.all.each do |restaurant|
+      if restaurant.average_star_rating > best_avg_review
+        best_avg_review = restaurant.average_star_rating
+        best_restaurant = restaurant
+      end
+    end
+    "The best reviewed restaurant is #{best_restaurant.name}, with an average score of #{best_avg_review}."
+  end
+
 end
